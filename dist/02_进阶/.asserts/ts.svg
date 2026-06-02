@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 500" font-family="'Microsoft YaHei', Arial, sans-serif" font-size="13">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>
+
+  <!-- 标题 -->
+  <text x="650" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">TypeScript 编译过程与编译选项</text>
+
+  <!-- ==================== 左侧：编译流程 ==================== -->
+  <rect x="20" y="50" width="400" height="420" rx="10" fill="#f5f5f5" stroke="#bbb" stroke-width="1.5"/>
+  <text x="220" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#0d47a1">编译流程</text>
+
+  <!-- 源码 -->
+  <rect x="70" y="100" width="200" height="50" rx="8" fill="#e3f2fd" stroke="#0d47a1" stroke-width="2"/>
+  <text x="170" y="120" text-anchor="middle" font-weight="bold" fill="#0d47a1">TypeScript 源码</text>
+  <text x="170" y="138" text-anchor="middle" font-size="11" fill="#1565c0">.ts / .tsx</text>
+
+  <!-- 箭头 -->
+  <line x1="170" y1="150" x2="170" y2="185" stroke="#555" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- 编译器 -->
+  <rect x="70" y="190" width="200" height="50" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="170" y="210" text-anchor="middle" font-weight="bold" fill="#e65100">TypeScript 编译器</text>
+  <text x="170" y="228" text-anchor="middle" font-size="11" fill="#ef6c00">tsc</text>
+
+  <!-- 箭头 -->
+  <line x1="170" y1="240" x2="170" y2="275" stroke="#555" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- 编译输出 -->
+  <rect x="70" y="280" width="200" height="50" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="170" y="300" text-anchor="middle" font-weight="bold" fill="#2e7d32">编译输出</text>
+
+  <!-- 箭头分叉 -->
+  <line x1="170" y1="330" x2="170" y2="355" stroke="#555" stroke-width="2"/>
+  <line x1="170" y1="355" x2="70" y2="380" stroke="#555" stroke-width="2"/>
+  <line x1="170" y1="355" x2="170" y2="380" stroke="#555" stroke-width="2"/>
+  <line x1="170" y1="355" x2="270" y2="380" stroke="#555" stroke-width="2"/>
+
+  <!-- 三个输出 -->
+  <rect x="25" y="385" width="90" height="40" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="70" y="403" text-anchor="middle" font-weight="bold" fill="#1b5e20">.js</text>
+  <text x="70" y="418" text-anchor="middle" font-size="10" fill="#2e7d32">JavaScript</text>
+
+  <rect x="125" y="385" width="90" height="40" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="170" y="403" text-anchor="middle" font-weight="bold" fill="#1b5e20">.d.ts</text>
+  <text x="170" y="418" text-anchor="middle" font-size="10" fill="#2e7d32">类型声明</text>
+
+  <rect x="225" y="385" width="90" height="40" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="270" y="403" text-anchor="middle" font-weight="bold" fill="#1b5e20">.map</text>
+  <text x="270" y="418" text-anchor="middle" font-size="10" fill="#2e7d32">SourceMap</text>
+
+  <!-- ==================== 右侧：编译选项 ==================== -->
+  <rect x="440" y="50" width="830" height="420" rx="10" fill="#f5f5f5" stroke="#bbb" stroke-width="1.5"/>
+  <text x="855" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#4a148c">编译选项分类</text>
+
+  <!-- 连接线：左侧编译流程到右侧编译选项 -->
+  <path d="M 300 215 L 432 215" stroke="#9c27b0" stroke-width="1.5" stroke-dasharray="6 3" marker-end="url(#arrowhead)"/>
+  <text x="366" y="208" text-anchor="middle" font-size="10" fill="#9c27b0">配置</text>
+
+  <!-- 四个分类框 -->
+  <!-- 类型检查 -->
+  <rect x="460" y="100" width="185" height="160" rx="8" fill="#e8eaf6" stroke="#283593" stroke-width="2"/>
+  <text x="552" y="125" text-anchor="middle" font-weight="bold" fill="#283593">类型检查</text>
+  <line x1="475" y1="135" x2="630" y2="135" stroke="#283593" stroke-width="1"/>
+  <text x="552" y="155" text-anchor="middle" fill="#1a237e">strict</text>
+  <text x="552" y="178" text-anchor="middle" fill="#1a237e">noImplicitAny</text>
+  <text x="552" y="201" text-anchor="middle" fill="#1a237e">strictNullChecks</text>
+
+  <!-- 输出控制 -->
+  <rect x="660" y="100" width="185" height="160" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="752" y="125" text-anchor="middle" font-weight="bold" fill="#e65100">输出控制</text>
+  <line x1="675" y1="135" x2="830" y2="135" stroke="#e65100" stroke-width="1"/>
+  <text x="752" y="155" text-anchor="middle" fill="#bf360c">outDir</text>
+  <text x="752" y="178" text-anchor="middle" fill="#bf360c">declaration</text>
+  <text x="752" y="201" text-anchor="middle" fill="#bf360c">sourceMap</text>
+
+  <!-- 模块系统 -->
+  <rect x="860" y="100" width="185" height="160" rx="8" fill="#e0f7fa" stroke="#006064" stroke-width="2"/>
+  <text x="952" y="125" text-anchor="middle" font-weight="bold" fill="#006064">模块系统</text>
+  <line x1="875" y1="135" x2="1030" y2="135" stroke="#006064" stroke-width="1"/>
+  <text x="952" y="155" text-anchor="middle" fill="#004d40">module</text>
+  <text x="952" y="178" text-anchor="middle" fill="#004d40">moduleResolution</text>
+  <text x="952" y="201" text-anchor="middle" fill="#004d40">esModuleInterop</text>
+
+  <!-- 语言特性 -->
+  <rect x="1060" y="100" width="185" height="160" rx="8" fill="#fce4ec" stroke="#880e4f" stroke-width="2"/>
+  <text x="1152" y="125" text-anchor="middle" font-weight="bold" fill="#880e4f">语言特性</text>
+  <line x1="1075" y1="135" x2="1230" y2="135" stroke="#880e4f" stroke-width="1"/>
+  <text x="1152" y="155" text-anchor="middle" fill="#4a148c">target</text>
+  <text x="1152" y="178" text-anchor="middle" fill="#4a148c">lib</text>
+  <text x="1152" y="201" text-anchor="middle" fill="#4a148c">jsx</text>
+
+  <!-- 底部：编译选项作用说明 -->
+  <rect x="460" y="280" width="785" height="80" rx="8" fill="#f3e5f5" stroke="#4a148c" stroke-width="1.5"/>
+  <text x="852" y="305" text-anchor="middle" font-weight="bold" fill="#4a148c">编译选项作用</text>
+  <text x="490" y="330" font-size="12" fill="#6a1b9a">• 类型检查（strict）</text>
+  <text x="680" y="330" font-size="12" fill="#6a1b9a">• 输出格式（module）</text>
+  <text x="870" y="330" font-size="12" fill="#6a1b9a">• 目标版本（target）</text>
+  <text x="1060" y="330" font-size="12" fill="#6a1b9a">• 声明文件（declaration）</text>
+
+  <!-- 从分类框到底部作用的连接 -->
+  <line x1="552" y1="260" x2="552" y2="280" stroke="#283593" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="752" y1="260" x2="752" y2="280" stroke="#e65100" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="952" y1="260" x2="952" y2="280" stroke="#006064" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="1152" y1="260" x2="1152" y2="280" stroke="#880e4f" stroke-width="1" stroke-dasharray="3 3"/>
+
+</svg>
