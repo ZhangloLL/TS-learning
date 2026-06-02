@@ -38,14 +38,23 @@ baseconfig
 
 ```json
 {
-    "compilerOptions":{
-        "target":"ES2020",
-        "module":"commonjs",
-        "strict":true,
-        "outDir":"./dist"
+    "compilerOptions": {
+        "target": "ES2020",
+        "module": "commonjs",
+        "strict": true,
+        "outDir": "./dist",
+        "rootDir": "./src"
     },
-    "include":["src/**/*"],
-    "exclude":["node_modules", "dist"]
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "dist"]
 }
 ```
 
+配置说明：
+
+- **target：**编译目标 JavaScript 版本
+- **module：**使用的模块系统
+- **strict：**启用所有严格类型检查
+- **outDir：**输出目录
+
+<img src=".asserts/ts.svg">
