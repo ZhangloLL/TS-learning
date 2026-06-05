@@ -63,3 +63,19 @@ baseconfig
 
 
 <img src=".asserts/迭代器.svg">
+
+### Promise
+注意事项：
+泛型参数：始终为Promise知道泛型参数，明确返回类型
+错误处理: 记得使用catch处理Promise失败的情况
+all vs allSetted: 需要全部结果时使用allSetted,需要快速失败时使用all
+async/await：现代代码推荐使用async/await,语法更简单
+总结
+Promise 是 TypeScript 异步编程的核心。
+
+Promise：异步操作容器，有 pending/fulfilled/rejected 三种状态
+then/catch：链式处理异步结果
+Promise.all：等待全部完成，任一失败则整体失败
+Promise.race：返回最先完成的结果
+Promise.allSettled：等待全部结束，返回每个的状态
+建议：使用 async/await 语法配合 Promise，让异步代码既类型安全又易于阅读。
