@@ -58,3 +58,8 @@ baseconfig
 - **outDir：**输出目录
 
 <img src=".asserts/ts.svg">
+
+### 迭代器
+
+
+<img src=".asserts/迭代器.svg">
