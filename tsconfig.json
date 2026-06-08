@@ -4,7 +4,17 @@
         "module": "commonjs",
         "strict": true,
         "outDir": "./dist",
-        "rootDir": "./src"
+        "rootDir": "./src",
+        // 启动增量编译
+        "incremental": true,
+        // 跳过node_modeles类型检查
+        "skipLibCheck": true,
+        // 跳过声明文件生成
+        "noEmit": true,
+        // 启动快速增量构建
+        "assumeChangesOnlyAffectDirectDependencies": true,
+        // 启用缓存
+        "tsBuildInfoFile": ".tsbuildinfo"
     },
     "include": ["src/**/*"],
     "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.spec.ts"]
